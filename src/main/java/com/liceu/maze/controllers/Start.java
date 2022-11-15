@@ -1,5 +1,7 @@
 package com.liceu.maze.controllers;
 
+import com.liceu.maze.services.GameService;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,6 +21,11 @@ public class Start extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        GameService gameService = new GameService();
+        String mapa = req.getParameter("mapa");
+        System.out.println("Mapa elegido: " + mapa);
+
+
         RequestDispatcher dispatcher =
                 req.getRequestDispatcher("/WEB-INF/jsp/canvas.jsp");
         dispatcher.forward(req,resp);

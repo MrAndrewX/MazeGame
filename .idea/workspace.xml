@@ -4,35 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f9638f8-83b8-4f97-a462-e8f4542ea44d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/EndForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/GetCoin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/GetKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Nav.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Open.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Reset.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Start.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Winners.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Coin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Door.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Key.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/MapSite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Maze.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Room.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Wall.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/services/MazeBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/services/StandardMazeBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+    <list default="true" id="2f9638f8-83b8-4f97-a462-e8f4542ea44d" name="Changes" comment="Frist commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/services/GameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Door.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Door.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +107,28 @@
       <option name="presentableId" value="Default" />
       <updated>1668011678253</updated>
     </task>
+    <task id="LOCAL-00001" summary="Frist commit">
+      <created>1668438344936</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668438344936</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Frist commit">
+      <created>1668438404379</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668438404379</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Frist commit">
+      <created>1668438411682</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668438411682</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -140,5 +141,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Frist commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Frist commit" />
   </component>
 </project>

@@ -7,7 +7,7 @@ public class Player {
     Room currentroom;
     List<Item> itemList = new ArrayList<>();
 
-    public void setCurrentroom(Room currentroom) {
+    public void setCurrentRoom(Room currentroom) {
         System.out.println("Estas en habitacion: "+ currentroom.getNumber());
         this.currentroom = currentroom;
         currentroom.enter(this);
@@ -21,7 +21,7 @@ public class Player {
         return this.itemList;
     }
 
-    public Room getCurrentroom() {
+    public Room getCurrentRoom() {
         return this.currentroom;
     }
 }

@@ -9,11 +9,11 @@ public class Room {
     boolean target = false;
     private Map<Maze.Directions, MapSite> sides = new HashMap<>();
 
-    public Map<Maze.Directions, MapSite> getSides() {
-        return sides;
+    public MapSite getSide(Maze.Directions dir) {
+        return this.sides.get(dir);
     }
 
-    public void setSides(Map<Maze.Directions, MapSite> sides) {
+    public void setSide(Map<Maze.Directions, MapSite> sides) {
         this.sides = sides;
     }
 
