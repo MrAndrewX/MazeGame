@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Key implements Item{
-    List<Door> doors = new ArrayList<>();
-    String name;
+    private List<Door> doors = new ArrayList<>();
+    private String name;
     public Key(String name) {
         this.name = name;
     }
@@ -14,7 +14,7 @@ public class Key implements Item{
         this.doors.add(d);
     }
 
-    public void open(Door door){
+    public void open(Door door) {
         this.doors
                 .stream()
                 .filter(d -> d.equals(door))

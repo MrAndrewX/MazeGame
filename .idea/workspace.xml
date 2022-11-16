@@ -5,13 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f9638f8-83b8-4f97-a462-e8f4542ea44d" name="Changes" comment="Frist commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/services/GameService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/JS/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/coin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/key.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/pj.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Nav.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Nav.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Start.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Door.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Door.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Key.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Maze.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/services/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/services/GameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/services/StandardMazeBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/services/StandardMazeBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/canvas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/canvas.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,15 +52,35 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/andrew/maze/maze&quot;
+    &quot;last_opened_file_path&quot;: &quot;/home/andrew/IdeaProjects/MazeGame/src/main/webapp/WEB-INF/img&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.liceu.maze.model" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/JS" />
+    </key>
   </component>
   <component name="RunManager" selected="Maven.MazeGame [clean,package,cargo:deploy]">
+    <configuration name="GameService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.liceu.maze.services.GameService" />
+      <module name="MazeGame" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.liceu.maze.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MazeGame [clean,package,cargo:deploy]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -94,9 +123,15 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.GameService" />
       <item itemvalue="Maven.MazeGame [clean,package,cargo:deploy]" />
       <item itemvalue="Remote JVM Debug.DebugTomcat" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GameService" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -128,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668438411682</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Frist commit">
+      <created>1668473513887</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668473513887</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

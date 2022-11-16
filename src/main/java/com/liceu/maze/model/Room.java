@@ -3,38 +3,19 @@ package com.liceu.maze.model;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Room {
-    int number;
-    Item item;
-    boolean target = false;
-    private Map<Maze.Directions, MapSite> sides = new HashMap<>();
+public class Room { private int number;
+    private Item item;
 
-    public MapSite getSide(Maze.Directions dir) {
-        return this.sides.get(dir);
-    }
+    private boolean target = false;
 
-    public void setSide(Map<Maze.Directions, MapSite> sides) {
-        this.sides = sides;
-    }
+    public Map<Maze.Directions, MapSite> sides = new HashMap<>();
 
-    public Room(int number){
+    public Room(int number) {
         this.number = number;
     }
 
     public int getNumber() {
         return number;
-    }
-
-    public void setNumber(int number) {
-        this.number = number;
-    }
-
-    public Item getItem() {
-        return item;
-    }
-
-    public void setItem(Item item) {
-        this.item = item;
     }
 
     public boolean isTarget() {
@@ -44,6 +25,19 @@ public class Room {
     public void setTarget(boolean target) {
         this.target = target;
     }
+
+    public void setItem(Item it) {
+        this.item = it;
+    }
+
+    public MapSite getSide(Maze.Directions dir) {
+        return this.sides.get(dir);
+    }
+
+    public void setSide(Maze.Directions dir, MapSite ms) {
+        this.sides.put(dir, ms);
+    }
+
     public void enter(Player player) {
         if (this.item != null) {
             System.out.println("Has obtingut un ítem: " + this.item.toString());
@@ -51,9 +45,4 @@ public class Room {
             this.item = null;
         }
     }
-
-    public void setSide(Maze.Directions dir, MapSite ms) {
-        this.sides.put(dir, ms);
-    }
-
 }

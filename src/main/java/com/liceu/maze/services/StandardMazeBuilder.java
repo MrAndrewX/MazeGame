@@ -3,27 +3,29 @@ package com.liceu.maze.services;
 import com.liceu.maze.model.*;
 
 public class StandardMazeBuilder implements MazeBuilder{
-    Maze maze = new Maze();
+    private Maze maze = new Maze();
 
     @Override
     public void buildRoom(int nroom) {
-    Room room = new Room(nroom);
-    room.setSide(Maze.Directions.NORTH, new Wall());
+        Room room = new Room(nroom);
+        room.setSide(Maze.Directions.NORTH, new Wall());
         room.setSide(Maze.Directions.SOUTH, new Wall());
         room.setSide(Maze.Directions.WEST, new Wall());
         room.setSide(Maze.Directions.EAST, new Wall());
-        maze.addRoom(nroom,room);
+        maze.addRoom(nroom, room);
     }
 
     @Override
     public void setTarget(int nroom) {
-this.maze.getRoom(nroom).setTarget(true);
+        this.maze.getRoom(nroom).setTarget(true);
     }
 
     @Override
     public void buildDoor(int roomFrom, int roomTo, Maze.Directions dir) {
-    Door door = buildDoorInternal(roomFrom,roomTo,dir);
+        Door door = buildDoorInternal(roomFrom, roomTo, dir);
+        door.open();
     }
+
     private Door buildDoorInternal(int roomFrom, int roomTo, Maze.Directions dir) {
         Room r1 = maze.getRoom(roomFrom);
         Room r2 = maze.getRoom(roomTo);
@@ -45,8 +47,8 @@ this.maze.getRoom(nroom).setTarget(true);
 
     @Override
     public void buildDoor(int roomFrom, int roomTo, Maze.Directions dir, Key key) {
-    Door d = buildDoorInternal(roomFrom,roomTo,dir);
-    key.addDoor(d);
+        Door d = buildDoorInternal(roomFrom, roomTo, dir);
+        key.addDoor(d);
     }
 
     @Override

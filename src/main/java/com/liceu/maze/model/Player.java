@@ -4,17 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Player {
-    Room currentroom;
-    List<Item> itemList = new ArrayList<>();
-
-    public void setCurrentRoom(Room currentroom) {
-        System.out.println("Estas en habitacion: "+ currentroom.getNumber());
-        this.currentroom = currentroom;
-        currentroom.enter(this);
+    private Room currentRoom;
+    private List<Item> itemList = new ArrayList<>();
+    public void setCurrentRoom(Room currentRoom) {
+        System.out.println("Ets a l'habitació: " + currentRoom.getNumber());
+        this.currentRoom = currentRoom;
+        currentRoom.enter(this);
     }
 
-    public void addItem(Item item) {
-        this.itemList.add(item);
+    public void addItem(Item it) {
+        this.itemList.add(it);
     }
 
     public List<Item> getItemList() {
@@ -22,6 +21,6 @@ public class Player {
     }
 
     public Room getCurrentRoom() {
-        return this.currentroom;
+        return this.currentRoom;
     }
 }
