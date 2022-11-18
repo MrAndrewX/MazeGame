@@ -8,6 +8,11 @@ const room = JSON.parse(document.getElementById("json-info").textContent)
 
 ctx.fillStyle = "black";
 ctx.font = '20px serif';
+ctx.fillText(`${room.message}`, 200, 200);
+
+ctx.fillText(`${room.message}`, 200, 200);
+
+
   ctx.fillText(`Room: ${room.roomnumber}`, 5, 40);
   ctx.fillText(`Coins: ${room.items[0].coins}`, 5, 60);
   ctx.fillText(`Keys: ${room.items[1].keys}`, 5, 80);
@@ -79,10 +84,11 @@ const coinimg= new Image(60,45);
 if(room.coindisplay == true){
 
     coinimg.onload = drawCoin;
-    coinimg.src = './img/coin.png'
+    coinimg.src = '/img/coin.png'
 }
 function drawCoin(){
     ctx.drawImage(coinimg,425,425,60,60)
+
 }
 
 const keyimg = new Image(60,45);
@@ -90,20 +96,20 @@ const keyimg = new Image(60,45);
 if(room.keydisplay == true){
 
     keyimg.onload = drawKey;
-    keyimg.src = './img/key.png'
+    keyimg.src = '/img/key.png'
 }
 function drawKey(){
     ctx.drawImage(keyimg,175,410,78,78)
 }
 const arrowsimg = new Image(60,45);
 arrowsimg.onload = drawArrows;
-arrowsimg.src = './img/arrows.png'
+arrowsimg.src = '/img/arrows.png'
 function drawArrows(){
 ctx.drawImage(arrowsimg,575,610,220,220)
 }
 const pjimg = new Image(60,45);
 pjimg.onload = drawpj;
-pjimg.src = './img/pj.png'
+pjimg.src = '/img/pj.png'
 function drawpj(){
     ctx.drawImage(pjimg,290,280,100,100)
 }
@@ -128,37 +134,37 @@ function getCursorPosition(canvas, event) {
     if(x >649 && y > 651 && x <719 && y < 716){
         //get request
         console.log("up")
-        var url = 'http://172.0.0.1:8080/nav?dir=N';
-        window.location = url;
+        window.location.assign("http://127.0.0.1:8080/nav?dir=N");
     }
     //down
     if(x >650 && y > 726 && x <718 && y < 790){
         //get request
         console.log("down")
-        var url = 'http://172.0.0.1:8080/nav?dir=S';
-        window.location = url;
+  window.location.assign("http://127.0.0.1:8080/nav?dir=S");
     }
     //left
     if(x >577 && y > 727 && x <644 && y < 790){
         //get request
         console.log("left")
-        var url = 'http://172.0.0.1:8080/nav?dir=W';
-        window.location = url;
+        window.location.assign("http://127.0.0.1:8080/nav?dir=W");
     }
     if(x >727 && y > 726 && x <796 && y < 790){
         //get request
         console.log("right")
-        var url = 'http://172.0.0.1:8080/nav?dir=E';
-        window.location = url;
+        window.location.assign("http://127.0.0.1:8080/nav?dir=E");
+
     }
 
 }
 function keyClicked(){
+    ctx.fillStyle="white";
     ctx.fillRect(174,421, 70,70)
+    window.location.assign("http://127.0.0.1:8080/getkey");
     room.keydisplay = false;
 }
 function coinClicked(){
-    console.log("dibujando")
+ctx.fillStyle="white";
+window.location.assign("http://127.0.0.1:8080/getcoin");
 ctx.fillRect(422,422, 70,70)
 room.coindisplay=false;
 }

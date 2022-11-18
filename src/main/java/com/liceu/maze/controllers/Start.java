@@ -32,7 +32,7 @@ public class Start extends HttpServlet {
         session.setAttribute("maze",maze);
         player.setCurrentRoom(maze.getRoom(1));
 
-        String json = gameService.parseJson(player);
+        String json = gameService.parseJson(player,"Bienvenido, puedes empezar", "false","false");
         req.setAttribute("json",json);
             RequestDispatcher dispatcher =
                     req.getRequestDispatcher("/WEB-INF/jsp/canvas.jsp");

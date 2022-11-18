@@ -3,7 +3,10 @@ package com.liceu.maze.model;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Room { private int number;
+public class Room {
+    public boolean haveKey;
+    public boolean haveCoin;
+    private int number;
     private Item item;
 
     private boolean target = false;
@@ -38,11 +41,36 @@ public class Room { private int number;
         this.sides.put(dir, ms);
     }
 
+    public void setHaveCoin(boolean haveCoin) {
+        this.haveCoin = haveCoin;
+    }
+
+    public void setHaveKey(boolean haveKey) {
+        this.haveKey = haveKey;
+    }
+
     public void enter(Player player) {
-        if (this.item != null) {
-            System.out.println("Has obtingut un ítem: " + this.item.toString());
+        if (this.item instanceof Key) {
+
+            player.getCurrentRoom().haveKey = true;
+
+        }
+        if (this.item instanceof Coin){
+            player.getCurrentRoom().haveCoin = true;
+        }
+
+
+    }
+    public void getKey(Player player){
+
             player.addItem(this.item);
             this.item = null;
-        }
+
+    }
+    public void getCoin(Player player){
+
+        player.addItem(this.item);
+        this.item = null;
+
     }
 }

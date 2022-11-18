@@ -29,8 +29,9 @@ public class GameService {
                 .range(1,7)
                 .forEach(mazeBuilder::buildRoom);
 
-        Key k1 = new Key("Level1 Key");
-        Key k2 = new Key("Level2 Key");
+        Key k1 = new Key("Level1 Key",1);
+        Key k2 = new Key("Level2 Key",1);
+        Coin c1 = new Coin("Coin 1");
 
         mazeBuilder.buildDoor(1,2, Maze.Directions.NORTH);
         mazeBuilder.buildDoor(1,4, Maze.Directions.SOUTH);
@@ -41,6 +42,7 @@ public class GameService {
 
         mazeBuilder.putKeyInRoom(6, k2);
         mazeBuilder.putKeyInRoom(2, k1);
+        mazeBuilder.putCoinInRoom(4,c1);
 
         mazeBuilder.setTarget(3);
 
@@ -48,7 +50,7 @@ public class GameService {
     }
 
 
-    public String parseJson(Player player) {
+    public String parseJson(Player player, String message, String havekey,String havecoin) {
         String n = null;
         String s = null;
         String e = null;
@@ -77,19 +79,50 @@ public class GameService {
         }else if(west.equals("true")){
             w="open";
         }
+        String keydisplay = "";
+        if (havekey.equals("false")){
+            keydisplay = "false";
+        }else{
+            keydisplay = "true";
+        }
+        String coindisplay = "";
+
+        if (havecoin.equals("false")){
+            coindisplay = "false";
+        }else{
+            coindisplay = "true";
+        }
+        System.out.println(player.getItemList());
+        String writemessage = message;
+        int numkeys = 0;
+        int nummonedas = 0;
+        for (Item it : player.getItemList()){
+            if (it.toString().contains("Key")){
+                numkeys++;
+            }
+            if (it.toString().contains("Coin")){
+                nummonedas++;
+            }
+
+
+        }
 
         String json = "{\n" +
-                "        \"n\" : \""+n+"\",\n" +
-                "        \"s\" : \""+s+"\",\n" +
-                "        \"w\" : \""+w+"\",\n" +
-                "        \"e\" : \""+e+"\",\n" +
-                "        \"roomnumber\" : "+player.getCurrentRoom().getNumber()+",\n" +
-                "        \"coindisplay\": true,\n" +
-                "        \"keydisplay\" : true,\n" +
-                "        \"items\": [\n" +
-                "            {\"coins\": 7},\n" +
-                "            {\"keys\": 2}\n" +
-                "        ]\n" +
+                "          \"n\": \""+n+"\",\n" +
+                "          \"s\": \""+s+"\",\n" +
+                "          \"w\": \""+w+"\",\n" +
+                "          \"e\": \""+e+"\",\n" +
+                "          \"roomnumber\": "+player.getCurrentRoom().getNumber()+",\n" +
+                "          \"coindisplay\": "+coindisplay+",\n" +
+                "          \"keydisplay\": "+keydisplay+",\n" +
+                "          \"items\": [{\n" +
+                "              \"coins\": "+nummonedas+"\n" +
+                "            },\n" +
+                "            {\n" +
+                "              \"keys\": "+numkeys+"\n" +
+                "            }\n" +
+                "          ],\n" +
+                "          \"message\": \""+writemessage+"\"\n" +
                 "        }";
         return json;
 

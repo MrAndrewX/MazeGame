@@ -4,23 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f9638f8-83b8-4f97-a462-e8f4542ea44d" name="Changes" comment="Frist commit">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/JS/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/arrows.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/coin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/key.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/pj.png" afterDir="false" />
+    <list default="true" id="2f9638f8-83b8-4f97-a462-e8f4542ea44d" name="Changes" comment="Key se recojen con el metodo getKey">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/GetCoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/GetCoin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/GetKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/GetKey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Nav.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Nav.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Start.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Door.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Door.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Coin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Coin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Key.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Maze.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Wall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Wall.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/services/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/services/GameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/services/MazeBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/services/MazeBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/services/StandardMazeBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/services/StandardMazeBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/canvas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/canvas.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/JS/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/JS/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668473513887</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Añadido:&#10;Navegacion entre Habitaciones, falta implemetar las llaves. &#10;Modificar JS para que las flechas funcionen&#10;Modificar json para mostrar llaves">
+      <created>1668613426453</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668613426453</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -186,6 +191,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Frist commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Frist commit" />
+    <MESSAGE value="Añadido:&#10;Navegacion entre Habitaciones, falta implemetar las llaves. &#10;Modificar JS para que las flechas funcionen&#10;Modificar json para mostrar llaves" />
+    <MESSAGE value="Key se recojen con el metodo getKey" />
+    <option name="LAST_COMMIT_MESSAGE" value="Key se recojen con el metodo getKey" />
   </component>
 </project>

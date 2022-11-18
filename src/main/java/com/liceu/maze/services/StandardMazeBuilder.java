@@ -60,4 +60,9 @@ public class StandardMazeBuilder implements MazeBuilder{
     public Maze getMaze() {
         return this.maze;
     }
+
+    @Override
+    public void putCoinInRoom(int nroom,Coin coin) {
+        maze.getRoom(nroom).setItem(coin);
+    }
 }

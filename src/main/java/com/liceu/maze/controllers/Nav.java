@@ -37,8 +37,26 @@ public class Nav extends HttpServlet {
 
 
             gameService.go(player, dir);
+        String havekey = "false";
+        if (player.getCurrentRoom().haveKey){
+            havekey = "true";
+        }
+        String havecoin = "false";
+        if (player.getCurrentRoom().haveCoin){
+            havecoin = "true";
+            System.out.println("La habitacion tiene una moneda");
+        }
+        System.out.println("Tiene key?: " + havekey);
 
-        String json = gameService.parseJson(player);
+        String message = "";
+        if (player.getCurrentRoom().isTarget()){
+            message = "Has finalizado el laberinto";
+        }
+
+
+
+            String json = gameService.parseJson(player,message,havekey,havecoin);
+
         req.setAttribute("json",json);
         RequestDispatcher dispatcher =
                 req.getRequestDispatcher("/WEB-INF/jsp/canvas.jsp");
