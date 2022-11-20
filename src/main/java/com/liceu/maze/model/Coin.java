@@ -13,4 +13,9 @@ private String name;
                 "name='" + name + '\'' +
                 '}';
     }
+
+    @Override
+    public int getCost() {
+        return 0;
+    }
 }

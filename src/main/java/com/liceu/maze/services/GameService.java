@@ -14,11 +14,12 @@ public class GameService {
 
     }
 
-    public static void go(Player player, Maze.Directions dir) {
+    public static String go(Player player, Maze.Directions dir) {
         Room room = player.getCurrentRoom();
 
         MapSite ms = room.getSide(dir);
-        ms.enter(player);
+        String message = ms.enter(player);
+        return message;
     }
 
 
@@ -29,7 +30,7 @@ public class GameService {
                 .range(1,7)
                 .forEach(mazeBuilder::buildRoom);
 
-        Key k1 = new Key("Level1 Key",1);
+        Key k1 = new Key("Level1 Key",4);
         Key k2 = new Key("Level2 Key",1);
         Coin c1 = new Coin("Coin 1");
 

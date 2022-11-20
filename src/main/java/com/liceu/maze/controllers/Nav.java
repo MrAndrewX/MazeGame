@@ -1,5 +1,7 @@
 package com.liceu.maze.controllers;
 
+import com.liceu.maze.model.Door;
+import com.liceu.maze.model.Item;
 import com.liceu.maze.model.Maze;
 import com.liceu.maze.model.Player;
 import com.liceu.maze.services.GameService;
@@ -36,9 +38,12 @@ public class Nav extends HttpServlet {
 
 
 
-            gameService.go(player, dir);
+            String message = gameService.go(player, dir);
+
         String havekey = "false";
+
         if (player.getCurrentRoom().haveKey){
+
             havekey = "true";
         }
         String havecoin = "false";
@@ -48,10 +53,14 @@ public class Nav extends HttpServlet {
         }
         System.out.println("Tiene key?: " + havekey);
 
-        String message = "";
+
         if (player.getCurrentRoom().isTarget()){
             message = "Has finalizado el laberinto";
         }
+
+
+
+
 
 
 

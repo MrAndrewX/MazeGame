@@ -6,6 +6,7 @@ import java.util.Map;
 public class Room {
     public boolean haveKey;
     public boolean haveCoin;
+
     private int number;
     private Item item;
 
@@ -73,4 +74,14 @@ public class Room {
         this.item = null;
 
     }
+
+
+    public int getKeyCost() {
+        if (this.item instanceof Key) {
+            return this.item.getCost();
+        }
+        return 0;
+    }
+
+
 }
