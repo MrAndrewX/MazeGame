@@ -1,7 +1,5 @@
 package com.liceu.maze.controllers;
 
-import com.liceu.maze.model.Door;
-import com.liceu.maze.model.Item;
 import com.liceu.maze.model.Maze;
 import com.liceu.maze.model.Player;
 import com.liceu.maze.services.GameService;
@@ -41,6 +39,7 @@ public class Nav extends HttpServlet {
             String message = gameService.go(player, dir);
 
         String havekey = "false";
+        int numcoins = 0;
 
         if (player.getCurrentRoom().haveKey){
 
@@ -49,7 +48,6 @@ public class Nav extends HttpServlet {
         String havecoin = "false";
         if (player.getCurrentRoom().haveCoin){
             havecoin = "true";
-            System.out.println("La habitacion tiene una moneda");
         }
         System.out.println("Tiene key?: " + havekey);
 
@@ -72,7 +70,7 @@ public class Nav extends HttpServlet {
         dispatcher.forward(req,resp);
     }
 
-    private Maze.Directions dirparse(String direction) {
+    public Maze.Directions dirparse(String direction) {
         if (direction.equals("N")){
             return Maze.Directions.NORTH;
         }else

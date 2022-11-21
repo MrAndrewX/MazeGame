@@ -154,7 +154,64 @@ function getCursorPosition(canvas, event) {
         window.location.assign("http://127.0.0.1:8080/nav?dir=E");
 
     }
+     if(x >577 && y > 727 && x <644 && y < 790){
+            //get request
+            console.log("left")
+            window.location.assign("http://127.0.0.1:8080/nav?dir=W");
+        }
+        if(x >727 && y > 726 && x <796 && y < 790){
+            //get request
+            console.log("right")
+            window.location.assign("http://127.0.0.1:8080/nav?dir=E");
 
+        }
+        if(x >291 && y > 132 && x <390 && y < 160 && room.n == "close"){
+            //abrir norte
+            console.log("abrir norte")
+            openNorth()
+        }
+        if(x >291 && y > 503 && x <390 && y < 529 && room.s == "close"){
+            //abrir sur
+            console.log("abrir Sur")
+            openSur()
+        }
+        if(x >503 && y > 286 && x <531 && y < 386 && room.e == "close"){
+            //abrir este
+            console.log("abrir Este")
+            openEste()
+        }
+        if(x >133 && y > 286 && x <161 && y < 386 && room.w == "close"){
+            //abrir west
+            console.log("abrir west")
+            openWest()
+        }
+
+}
+function openWest(){
+
+    room.w = "open"
+    ctx.fillStyle = "white";
+    ctx.fillRect(130 , 285, 30, 100);
+    window.location.assign("http://127.0.0.1:8080/open?dir=W");
+}
+function openEste(){
+
+    room.e = "open"
+    ctx.fillStyle = "white";
+    ctx.fillRect(500 , 285, 100, 100);
+    window.location.assign("http://127.0.0.1:8080/open?dir=E");
+}
+function openSur(){
+    room.s = "open"
+    ctx.fillStyle = "white";
+    ctx.fillRect(290 , 500, 100, 30);
+    window.location.assign("http://127.0.0.1:8080/open?dir=S");
+}
+function openNorth(){
+    room.n = "open"
+    ctx.fillStyle = "white";
+    ctx.fillRect(290 , 130, 100, 30);
+    window.location.assign("http://127.0.0.1:8080/open?dir=N");
 }
 function keyClicked(){
     ctx.fillStyle="white";

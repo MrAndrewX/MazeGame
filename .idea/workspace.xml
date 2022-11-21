@@ -4,19 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f9638f8-83b8-4f97-a462-e8f4542ea44d" name="Changes" comment="Monedas funcionando">
+    <list default="true" id="2f9638f8-83b8-4f97-a462-e8f4542ea44d" name="Changes" comment="Avisar si esta cerrado o es una pared">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/GetCoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/GetCoin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/GetKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/GetKey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Nav.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Nav.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Coin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Coin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Open.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Open.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Door.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Door.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Key.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/MapSite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/MapSite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Wall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Wall.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/services/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/services/GameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/JS/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/JS/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668781770054</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Avisar si esta cerrado o es una pared">
+      <created>1668960202014</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1668960202014</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -199,6 +204,7 @@
     <MESSAGE value="Añadido:&#10;Navegacion entre Habitaciones, falta implemetar las llaves. &#10;Modificar JS para que las flechas funcionen&#10;Modificar json para mostrar llaves" />
     <MESSAGE value="Key se recojen con el metodo getKey" />
     <MESSAGE value="Monedas funcionando" />
-    <option name="LAST_COMMIT_MESSAGE" value="Monedas funcionando" />
+    <MESSAGE value="Avisar si esta cerrado o es una pared" />
+    <option name="LAST_COMMIT_MESSAGE" value="Avisar si esta cerrado o es una pared" />
   </component>
 </project>

@@ -30,8 +30,8 @@ public class GameService {
                 .range(1,7)
                 .forEach(mazeBuilder::buildRoom);
 
-        Key k1 = new Key("Level1 Key",4);
-        Key k2 = new Key("Level2 Key",1);
+        Key k1 = new Key("Level1 Key",1);
+        Key k2 = new Key("Level2 Key",0);
         Coin c1 = new Coin("Coin 1");
 
         mazeBuilder.buildDoor(1,2, Maze.Directions.NORTH);
@@ -51,7 +51,9 @@ public class GameService {
     }
 
 
-    public String parseJson(Player player, String message, String havekey,String havecoin) {
+    public String parseJson(Player player, String message, String havekey, String havecoin) {
+
+
         String n = null;
         String s = null;
         String e = null;
@@ -108,7 +110,12 @@ public class GameService {
 
         }
 
+
         String json = "{\n" +
+                "          \"canopennorth\": \"true\",\n" +
+                "          \"canopensouth\": \"true\",\n" +
+                "          \"canopenwest\": \"true\",\n" +
+                "          \"canopeneast\": \"true\",\n" +
                 "          \"n\": \""+n+"\",\n" +
                 "          \"s\": \""+s+"\",\n" +
                 "          \"w\": \""+w+"\",\n" +

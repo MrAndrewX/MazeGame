@@ -24,5 +24,27 @@ public class Player {
     public Room getCurrentRoom() {
         return this.currentRoom;
     }
+    public int getCoinsPlayer(Player player){
+        int numcoins = 0;
+        for (Item it : player.getItemList()){
+            if (it.toString().contains("Coin")){
+                numcoins++;
+            }
+        }
+        return numcoins;
+    }
+    public void restarCoins(Player player,int coins){
+        int limitreacher = 0;
+        for(Item it : player.getItemList()){
+            if (it instanceof Coin){
+                player.getItemList().remove(it);
+                limitreacher++;
+                if (limitreacher == coins){
+                    break;
+                }
+            }
+        }
+    }
+
 
 }

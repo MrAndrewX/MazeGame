@@ -1,9 +1,7 @@
 package com.liceu.maze.controllers;
 
-import com.liceu.maze.model.Item;
 import com.liceu.maze.model.Maze;
 import com.liceu.maze.model.Player;
-import com.liceu.maze.model.Room;
 import com.liceu.maze.services.GameService;
 
 import javax.servlet.RequestDispatcher;
@@ -23,28 +21,25 @@ public class GetKey extends HttpServlet {
         HttpSession session = req.getSession();
         Player player = (Player) session.getAttribute("player");
         Maze maze = (Maze) session.getAttribute("maze");
-        int nummonedas = 0;
-        for (Item it : player.getItemList()){
-
-            if (it.toString().contains("Coin")){
-                nummonedas++;
-            }
-        }
 
 
 
         if (player.getCurrentRoom().haveKey){
-            if (nummonedas >= player.getCurrentRoom().getKeyCost()){
-                System.out.println("monedas insuficientes");
-                String json = gameService.parseJson(player, "Monedas insuficientes!", "true", "false");
+            System.out.println("Monedas del jugador: "+player.getCoinsPlayer(player));
+            System.out.println("Coste de la llave de la habitacion: " + player.getCurrentRoom().getKeyCost());
+            if (player.getCoinsPlayer(player) < player.getCurrentRoom().getKeyCost()){
+                System.out.println("No puedes obtener esta llave");
+
+                String json = gameService.parseJson(player, "No tienes monedas suficientes", "true", "false");
+
+
                 req.setAttribute("json", json);
-                player.getCurrentRoom().setHaveKey(true);
                 RequestDispatcher dispatcher =
                         req.getRequestDispatcher("/WEB-INF/jsp/canvas.jsp");
                 dispatcher.forward(req, resp);
-
-            }else {
-
+            }
+            else{
+                player.restarCoins(player,player.getCurrentRoom().getKeyCost());
                 player.getCurrentRoom().getKey(player);
                 String json = gameService.parseJson(player, "Has recogido una llave!", "false", "false");
                 player.getCurrentRoom().setHaveKey(false);

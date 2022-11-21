@@ -1,7 +1,6 @@
 package com.liceu.maze.controllers;
 
 import com.liceu.maze.model.Player;
-import com.liceu.maze.model.Room;
 import com.liceu.maze.services.GameService;
 
 import javax.servlet.RequestDispatcher;

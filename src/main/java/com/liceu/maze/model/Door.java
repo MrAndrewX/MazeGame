@@ -18,7 +18,7 @@ public class Door implements  MapSite{
     public boolean isOpen() {
         return this.open;
     }
-    boolean entradoresult;
+
 
     @Override
     public String toString() {
@@ -28,22 +28,16 @@ public class Door implements  MapSite{
     @Override
     public String enter(Player player) {
         if (!this.open) {
-            List<Item> items = player.getItemList();
-            items.stream()
-                    .filter(i -> i instanceof Key)
-                    .map(i -> (Key) i)
-                    .forEach(k -> k.open(this));
+          return "Esta cerrada";
 
 
-        }
+        }else{
 
-        if (this.open) {
             Room r = getOtherRoom(player.getCurrentRoom());
             player.setCurrentRoom(r);
 
 
-        } else {
-          return "No tienes la llave";
+
         }
         return "";
     }
