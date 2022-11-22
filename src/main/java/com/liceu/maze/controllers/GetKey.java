@@ -30,7 +30,7 @@ public class GetKey extends HttpServlet {
             if (player.getCoinsPlayer(player) < player.getCurrentRoom().getKeyCost()){
                 System.out.println("No puedes obtener esta llave");
 
-                String json = gameService.parseJson(player, "No tienes monedas suficientes", "true", "false");
+                String json = gameService.parseJson(player, "No tienes monedas suficientes", "true", "false", false);
 
 
                 req.setAttribute("json", json);
@@ -41,7 +41,7 @@ public class GetKey extends HttpServlet {
             else{
                 player.restarCoins(player,player.getCurrentRoom().getKeyCost());
                 player.getCurrentRoom().getKey(player);
-                String json = gameService.parseJson(player, "Has recogido una llave!", "false", "false");
+                String json = gameService.parseJson(player, "Has recogido una llave!", "false", "false", false);
                 player.getCurrentRoom().setHaveKey(false);
 
                 req.setAttribute("json", json);

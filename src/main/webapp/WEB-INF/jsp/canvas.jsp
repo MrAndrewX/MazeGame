@@ -16,6 +16,12 @@
     <div style="display:none;">
         <img id="source" src="./img/coin.png" width="300" height="227" />
       </div>
+       <form action="/reset" method="GET">
+              <input type="submit" value="Reset">
+            </form>
+            <form action="/start" method="GET">
+              <input type="submit" value="Abandonar">
+            </form>
       <script type="application/json"  id="json-info">
         ${json}
       </script>

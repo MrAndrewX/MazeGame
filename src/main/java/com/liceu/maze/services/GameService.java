@@ -49,9 +49,36 @@ public class GameService {
 
         return mazeBuilder.getMaze();
     }
+    public Maze createMaze2() {
+        MazeBuilder mazeBuilder = new StandardMazeBuilder();
+        IntStream
+                .range(1,9)
+                .forEach(mazeBuilder::buildRoom);
+        Key k1 = new Key("k1",2);
+        Key k2 = new Key("k2",0);
+        Coin coin = new Coin("Coin 1");
+        Coin coin2 = new Coin("Coin 2");
+        mazeBuilder.buildDoor(1,2, Maze.Directions.EAST,k1);
+        mazeBuilder.buildDoor(1,5, Maze.Directions.WEST);
+        mazeBuilder.buildDoor(2,3, Maze.Directions.SOUTH);
+        mazeBuilder.buildDoor(3,4, Maze.Directions.WEST);
+        mazeBuilder.buildDoor(5,6, Maze.Directions.NORTH);
+        mazeBuilder.buildDoor(6,7, Maze.Directions.WEST);
+        mazeBuilder.buildDoor(7,8, Maze.Directions.WEST,k2);
+        mazeBuilder.putKeyInRoom(5,k1);
+        mazeBuilder.putKeyInRoom(4,k2);
+        mazeBuilder.putCoinInRoom(6,coin);
+        mazeBuilder.putCoinInRoom(7,coin2);
+        mazeBuilder.setTarget(8);
 
 
-    public String parseJson(Player player, String message, String havekey, String havecoin) {
+        return mazeBuilder.getMaze();
+
+
+    }
+
+
+    public String parseJson(Player player, String message, String havekey, String havecoin, boolean end) {
 
 
         String n = null;
@@ -112,10 +139,7 @@ public class GameService {
 
 
         String json = "{\n" +
-                "          \"canopennorth\": \"true\",\n" +
-                "          \"canopensouth\": \"true\",\n" +
-                "          \"canopenwest\": \"true\",\n" +
-                "          \"canopeneast\": \"true\",\n" +
+                "          \"end\": \""+end+""+"\",\n" +
                 "          \"n\": \""+n+"\",\n" +
                 "          \"s\": \""+s+"\",\n" +
                 "          \"w\": \""+w+"\",\n" +
@@ -135,4 +159,6 @@ public class GameService {
         return json;
 
     }
+
+
 }

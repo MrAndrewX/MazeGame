@@ -7,17 +7,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seleccion Laberinto</title>
+    <title>Añadir datos</title>
 </head>
 <body>
-    <h1>Selecciona el laberinto para jugar</h1>
-    <form action="/start" method="post">
-        <select name="mapid" id="mapa">
-            <option value="1">Mapa 1</option>
-            <option value="2">Mapa 2</option>
-            <input type="submit" value="Start!">
-
+    <h1>Has terminado el laberinto!</h1>
+    <p>Has acabado con un tiempo de ${time}</p>
+    <p>Si quieres guardar tu tiempo, introduce tu nombre</p>
+    <form action="/endform" method="post">
+        <label for="username"> Nombre: <input type="text" name="username"></label>
+        <input type="submit" value="Enviar">
     </form>
-    
 </body>
 </html>

@@ -21,7 +21,7 @@ public class GetCoin extends HttpServlet {
         Player player = (Player) session.getAttribute("player");
         if (player.getCurrentRoom().haveCoin){
             player.getCurrentRoom().getCoin(player);
-            String json = gameService.parseJson(player,"Has recogido una Moneda!", "false","false");
+            String json = gameService.parseJson(player,"Has recogido una Moneda!", "false","false", false);
             player.getCurrentRoom().setHaveCoin(false);
             req.setAttribute("json",json);
             RequestDispatcher dispatcher =

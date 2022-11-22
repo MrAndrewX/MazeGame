@@ -54,10 +54,10 @@ public class Open extends HttpServlet {
                 door.open();
                 msg = "Has abierto una puerta";
             } else {
-                msg = "You don't have the Key";
+                msg = "No tienes la llave";
             }
         }
-        String json = gameService.parseJson(player,msg,havekey,havecoin);
+        String json = gameService.parseJson(player,msg,havekey,havecoin, false);
 
         req.setAttribute("json",json);
         RequestDispatcher dispatcher =

@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Date;
 
 @WebServlet("/nav")
 public class Nav extends HttpServlet {
@@ -51,9 +52,15 @@ public class Nav extends HttpServlet {
         }
         System.out.println("Tiene key?: " + havekey);
 
-
+        boolean end = false;
         if (player.getCurrentRoom().isTarget()){
-            message = "Has finalizado el laberinto";
+            message = "Final." +
+                    " Haz click para continuar";
+            end=true;
+            Date date = new Date();
+            session.setAttribute("endtime",date.getTime());
+
+
         }
 
 
@@ -62,7 +69,7 @@ public class Nav extends HttpServlet {
 
 
 
-            String json = gameService.parseJson(player,message,havekey,havecoin);
+            String json = gameService.parseJson(player,message,havekey,havecoin,end);
 
         req.setAttribute("json",json);
         RequestDispatcher dispatcher =
