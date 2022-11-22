@@ -5,18 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f9638f8-83b8-4f97-a462-e8f4542ea44d" name="Changes" comment="Open controller implementado">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/endform.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/filters/EndformFIlter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/filters/SessionFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Winner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/services/WinnerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/winners.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/DAO/DB/WinnerDAODB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/DAO/DB/WinnerDAODB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/DAO/WinnerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/DAO/WinnerDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/EndForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/EndForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/GetCoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/GetCoin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/GetKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/GetKey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Nav.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Nav.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Open.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Open.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Reset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Reset.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Winners.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Winners.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/services/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/services/GameService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/JS/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/JS/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/canvas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/canvas.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/utils/MySqlDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/utils/MySqlDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/endform.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/endform.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/selectmaze.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/selectmaze.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,6 +65,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/src/main/webapp/JS" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.liceu.maze.filters" />
     </key>
   </component>
   <component name="RunManager" selected="Maven.MazeGame [clean,package,cargo:deploy]">
@@ -195,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669057269287</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Open controller implementado">
+      <created>1669077857648</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669077857648</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

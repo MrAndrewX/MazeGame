@@ -54,6 +54,7 @@ public class Nav extends HttpServlet {
 
         boolean end = false;
         if (player.getCurrentRoom().isTarget()){
+            session.setAttribute("end","end");
             message = "Final." +
                     " Haz click para continuar";
             end=true;

@@ -10,9 +10,7 @@ public class GameService {
 
 
 
-    public static void play(Maze maze, Player player) {
 
-    }
 
     public static String go(Player player, Maze.Directions dir) {
         Room room = player.getCurrentRoom();

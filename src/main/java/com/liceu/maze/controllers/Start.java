@@ -18,6 +18,9 @@ import java.util.Date;
 public class Start extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        HttpSession session = req.getSession();
+        session.removeAttribute("end");
+        session.removeAttribute("player");
         RequestDispatcher dispatcher =
                 req.getRequestDispatcher("/WEB-INF/jsp/selectmaze.jsp");
         dispatcher.forward(req,resp);
@@ -26,6 +29,8 @@ public class Start extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
+
+
         GameService gameService = new GameService();
         Player player = new Player();
         int mapid = Integer.parseInt(req.getParameter("mapid"));
