@@ -2,6 +2,8 @@ package com.liceu.maze.services;
 
 import com.liceu.maze.model.*;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.stream.IntStream;
 
@@ -124,9 +126,10 @@ public class GameService {
         String writemessage = message;
         int numkeys = 0;
         int nummonedas = 0;
+        List<Key> keylist = new ArrayList<>();
         for (Item it : player.getItemList()){
-            if (it.toString().contains("Key")){
-                numkeys++;
+            if (it instanceof Key){
+                keylist.add((Key) it);
             }
             if (it.toString().contains("Coin")){
                 nummonedas++;
@@ -134,6 +137,8 @@ public class GameService {
 
 
         }
+        System.out.println(keylist);
+        String keyListstr = keylist.toString();
 
 
         String json = "{\n" +
@@ -149,7 +154,7 @@ public class GameService {
                 "              \"coins\": "+nummonedas+"\n" +
                 "            },\n" +
                 "            {\n" +
-                "              \"keys\": "+numkeys+"\n" +
+                "              \"keys\": \""+keyListstr+"\"\n" +
                 "            }\n" +
                 "          ],\n" +
                 "          \"message\": \""+writemessage+"\"\n" +

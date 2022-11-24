@@ -48,6 +48,46 @@ td{
   color: #fff;
   border-bottom: solid 1px rgba(255,255,255,0.1);
 }
+.bn632-hover {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:focus {
+  outline: none;
+}
+
+.bn632-hover.bn21 {
+  background-image: linear-gradient(
+    to right,
+    #fc6076,
+    #ff9a44,
+    #ef9d43,
+    #e75516
+  );
+  box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+}
 
 
 /* demo styles */
@@ -133,7 +173,9 @@ section{
           </table>
         </div>
       </section>
-
+  <form action="/start" method="GET">
+              <input type="submit" value="Volver" class="bn632-hover bn21">
+            </form>
 
 </body>
 </html>

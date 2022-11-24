@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Date;
 
 @WebServlet("/reset")
 public class Reset extends HttpServlet {
@@ -22,6 +23,9 @@ public class Reset extends HttpServlet {
         session.removeAttribute("player");
         session.removeAttribute("maze");
         session.removeAttribute("starttime");
+
+        Date date = new Date();
+        session.setAttribute("starttime",date.getTime());
         Player player = new Player();
         session.setAttribute("player", player);
         Maze maze = gameService.createMaze();

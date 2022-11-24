@@ -8,9 +8,9 @@ const room = JSON.parse(document.getElementById("json-info").textContent)
 
 ctx.fillStyle = "black";
 ctx.font = '20px serif';
-ctx.fillText(`${room.message}`, 200, 200);
+ctx.fillText(`${room.message}`, 141, 101);
 
-ctx.fillText(`${room.message}`, 200, 200);
+
 
 
   ctx.fillText(`Room: ${room.roomnumber}`, 5, 40);
