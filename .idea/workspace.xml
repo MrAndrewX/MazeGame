@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f9638f8-83b8-4f97-a462-e8f4542ea44d" name="Changes" comment="Laberinto acabado, añadido filters y base de datos">
+    <list default="true" id="2f9638f8-83b8-4f97-a462-e8f4542ea44d" name="Changes" comment="Laberinto acabado, modificados jsps">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Reset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Reset.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/model/Key.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Nav.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Nav.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Open.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/controllers/Open.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/liceu/maze/services/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liceu/maze/services/GameService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/JS/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/JS/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/canvas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/canvas.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/winners.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/winners.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +40,8 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/andrew/IdeaProjects/MazeGame/src/main/webapp/WEB-INF/img&quot;
+    &quot;last_opened_file_path&quot;: &quot;/home/andrew/IdeaProjects/MazeGame/src/main/webapp/WEB-INF/img&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -206,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669144682580</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Laberinto acabado, modificados jsps">
+      <created>1669302277782</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1669302277782</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -228,6 +233,7 @@
     <MESSAGE value="Avisar si esta cerrado o es una pared" />
     <MESSAGE value="Open controller implementado" />
     <MESSAGE value="Laberinto acabado, añadido filters y base de datos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Laberinto acabado, añadido filters y base de datos" />
+    <MESSAGE value="Laberinto acabado, modificados jsps" />
+    <option name="LAST_COMMIT_MESSAGE" value="Laberinto acabado, modificados jsps" />
   </component>
 </project>

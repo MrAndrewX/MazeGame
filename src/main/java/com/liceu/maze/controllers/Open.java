@@ -28,7 +28,7 @@ public class Open extends HttpServlet {
                     req.getRequestDispatcher("/WEB-INF/jsp/canvas.jsp");
             dispatcher.forward(req,resp);
         }
-        Maze.Directions dir = dirparse(direction);
+        Maze.Directions dir = Nav.dirparse(direction);
 
 
         String havekey = "false";
@@ -44,7 +44,7 @@ public class Open extends HttpServlet {
         }
 
        Room room = player.getCurrentRoom();
-        Door door = (Door) room.getSide(dirparse(direction));
+        Door door = (Door) room.getSide(Nav.dirparse(direction));
         Key key = new Key();
         String msg = "";
         if (door.isOpen()){
@@ -67,20 +67,5 @@ public class Open extends HttpServlet {
 
 
     }
-    public Maze.Directions dirparse(String direction) {
-        if (direction.equals("N")){
-            return Maze.Directions.NORTH;
-        }else
-        if (direction.equals("S")){
-            return Maze.Directions.SOUTH;
-        }else
-        if (direction.equals("E")){
-            return Maze.Directions.EAST;
-        }else
-        if (direction.equals("W")){
-            return Maze.Directions.WEST;
-        }
-        return Maze.Directions.NORTH;
 
-    }
 }

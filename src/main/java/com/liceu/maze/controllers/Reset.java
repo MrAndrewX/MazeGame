@@ -28,7 +28,13 @@ public class Reset extends HttpServlet {
         session.setAttribute("starttime",date.getTime());
         Player player = new Player();
         session.setAttribute("player", player);
-        Maze maze = gameService.createMaze();
+        int mapid = (int) session.getAttribute("mapid");
+        Maze maze = new Maze();
+        if (mapid == 1) {
+            maze = gameService.createMaze();
+        }if (mapid == 2){
+            maze = gameService.createMaze2();
+        }
         session.setAttribute("maze", maze);
         player.setCurrentRoom(maze.getRoom(1));
         String json = gameService.parseJson(player,"Bienvenido, puedes empezar", "false","false", false);

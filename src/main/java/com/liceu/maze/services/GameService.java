@@ -8,9 +8,6 @@ import java.util.Scanner;
 import java.util.stream.IntStream;
 
 public class GameService {
-    private static Scanner scanner = new Scanner(System.in);
-
-
 
 
 

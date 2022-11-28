@@ -78,7 +78,7 @@ public class Nav extends HttpServlet {
         dispatcher.forward(req,resp);
     }
 
-    public Maze.Directions dirparse(String direction) {
+    public static Maze.Directions dirparse(String direction) {
         if (direction.equals("N")){
             return Maze.Directions.NORTH;
         }else
